@@ -7,15 +7,15 @@ version: 02
           - sudo apt-get update
           - sudo apt-get install nginx -y
 
-    build:
-        commands:
-            - echo build started on `date`
-            - cp index.html /var/www/html/     
+   build:
+       commands:
+          - echo build started on `date`
+          - cp index.html /var/www/html/     
 
     post_build:
-        commands:
-            - echo configuring nginx
+       commands:
+          - echo configuring nginx
 
  artifacts:
    files:
-     - /var/www/html/index.html                       
+     - /var/www/html/index.html       
